@@ -1,0 +1,183 @@
+	*{
+		margin:0;
+		padding: 0;
+		box-sizing: border-box;
+	}
+	body{
+		background-color:rgb(39,41,68);
+		font-family: sans-serif;
+	} 
+	.game{
+		height: 96vh;
+	}   
+	.score{
+		display: flex;
+		justify-content: space-around;
+		color: #ddd;
+		align-items: center;
+		height: 20vh;
+	}
+	.score h2{ 
+		font-size: 28px;
+	}
+	.score p{
+		text-align: center;
+		margin-top: 10px;
+		font-size: 23px;
+	}   
+	                                                        /*INTRO SECTION*/
+	.intro{
+		display: flex;
+		flex-direction: column;
+		justify-content:space-around; 
+		align-items:center; 
+		height:45vh;
+		transition: 1s ease;
+
+		;  
+		
+
+	}
+	.intro h1{ 
+		color:#ddd;
+		font-size: 45px;
+	}
+	.intro button ,.match button{
+	color:rgb(224,224,224);
+	background-color:rgb(45,117,96); 
+	border:2px solid #ddd;
+	padding:10px 20px; 
+	font-size:22px;
+	border-radius: 112px;
+	width:150px;
+	cursor:pointer;
+	transition:0.4s;
+	font-weight: bold;
+	} 
+	button:hover{
+		background-color:lightgrey;
+		font-weight: bold;
+		color:rgb(45,117,96);
+		border:2px solid rgb(45,117,96);
+		
+	}
+	                                                     /*MATCH SECTION*/
+	.match{
+		position:relative; 
+		top:-280px;
+		left: 0px;
+	display: flex;
+		flex-direction: column;
+		justify-content:space-around;
+		align-items: center;
+		transition: 1s ease 1s;  
+	}
+	.match h1{
+		color:#ddd;
+		font-size: 45px;
+	}
+	.imges{
+		display: flex; 
+	margin-bottom:20px; 
+
+	}
+	.player-animation{
+			animation-name:player-animi;
+	animation-duration:0.4s;
+	animation-iteration-count:5;
+	animation-direction:alternate-reverse;
+	}
+	@keyframes player-animi{
+		0%{
+			transform:rotateY(180deg) translateY(25px);
+		}
+
+		100%{
+			transform:rotateY(180deg) translateY(-25px);
+		}
+	}
+
+	.computer-animation{
+	animation-name:computer-animi;
+	animation-duration:0.4s;
+	animation-iteration-count:5;
+	animation-direction:alternate-reverse;
+	}
+	@keyframes computer-animi{
+		0%{
+			transform: translateY(25px);
+
+		}
+
+		100%{
+			transform:translateY(-25px);
+
+		}
+	}
+	.player-hand{
+		transform:rotateY(180deg);
+	}
+	.options{
+		display: flex;
+		justify-content: space-around; 
+		align-items: center;
+		width:50%
+	}
+	.options button{
+		margin-left:15px;
+		cursor:pointer;
+
+	}
+
+	.cColorRed{
+		color:#A22727;
+	}
+	.cColorGreen{
+		color:rgb(45,117,96);
+	}
+	.pColorRed{
+		color:#A22727;
+	}
+	.pColorGreen{
+		color:rgb(45,117,96);
+	}
+	.fadeout{
+	opacity:0;
+	pointer-events:none; 
+	}
+	.fadein{
+		opacity:1;
+	    pointer-events:all; 
+	} 
+	.block{
+		pointer-events:none;
+	}
+	.winning-png{
+    position:absolute;
+    width: 80%;
+	left: 10%;
+	bottom:20px;
+	display:none;
+	animation-name:winnnPng;
+	animation-duration:1s;
+	overflow:none;
+	animation-direction:alternate-reverse;
+
+	
+	}
+	::-webkit-scrollbar {
+		width: 0px;
+		background-color: transparent;
+	  }
+	@keyframes winnnPng {
+	0%{
+
+		transform: scale();
+		
+	}	
+	100%{
+		transform: scale(-1);
+
+	}
+	}
+	
