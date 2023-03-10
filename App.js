@@ -27,11 +27,11 @@
        	buttons.addEventListener("click",()=>{
 
  setTimeout(()=>{
- changeImg()
-  whoWins()
+ changeImg();
+  whoWins();
   updateScore();
   roundEnd();
-  notBlock()
+  notBlock();
  },1900)
 
 
@@ -47,7 +47,8 @@
                 computerHand.src=`assets/${computerChoise}.png`
                 playerHand.src=`assets/${playerChoise}.png`
            }
-
+           
+           
              function whoWins(){
            
              	if(playerChoise===computerChoise){
@@ -67,7 +68,7 @@
 		         		updateScore();
 		         		return;
              	}
-
+              
                if(playerChoise==="paper"){
              		if(computerChoise==="rock"){
              		 winnerText.textContent="Player wins"
@@ -111,12 +112,28 @@
             	computerHand.classList.remove("computer-animation")
             	playerHand.classList.remove("player-animation")},1900)
               notshowingWinningPng()
+              rest()
             }addingAnimi()
+
+            if(addingAnimi){
+              winnerText.textContent="Getting computer option..."
+                if(pColor.classList('pColorGreen')||cColor.classList("cColorGreen")){
+                  pScore.textContent="0"; 
+                  cScore.textContent="0"
+                  console.log("fired")
+                }
+            }
+            console.log(pColor)
+            function rest(){
+              computerHand.src=`assets/rock.png`
+                playerHand.src=`assets/rock.png`
+              
+            }
             function roundEnd(){
-            	if (playerScore===5&&playerScore++){
+            	if (playerScore===5){
                    winnerText.textContent="Player won this round"
-                   playerScore=0;
-                   computerScore=0;
+                     playerScore=0;
+                   computerScore=0
                   pColor.classList.add("pColorGreen")
                   cColor.classList.add("cColorRed")
                   showingWinningPng()
@@ -127,10 +144,10 @@
                   cColor.classList.remove("cColorRed")
 
                    }
-            	if(computerScore===5&&computerScore++){
+            	if(computerScore===5){
             		winnerText.textContent="Computer won this round"
-                   playerScore=0;
-                   computerScore=0;
+                    playerScore=0;
+                    computerScore=0;
                      pColor.classList.add("pColorRed")
                   cColor.classList.add("cColorGreen")
                   showingWinningPng()
@@ -155,4 +172,6 @@
           winningPng.style.display="none"
         }
      } match()
+    
+                
     

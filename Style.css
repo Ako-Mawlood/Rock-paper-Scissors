@@ -4,7 +4,7 @@
 		box-sizing: border-box;
 	}
 	body{
-		background-color:rgb(39,41,68);
+		background-color:rgb(39,15,68);
 		font-family: sans-serif;
 	} 
 	.game{
@@ -84,7 +84,7 @@
 	.player-animation{
 			animation-name:player-animi;
 	animation-duration:0.4s;
-	animation-iteration-count:5;
+	animation-iteration-count:6;
 	animation-direction:alternate-reverse;
 	}
 	@keyframes player-animi{
