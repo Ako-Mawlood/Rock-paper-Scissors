@@ -4,14 +4,14 @@
 		box-sizing: border-box;
 	}
 	body{
-		background-color:rgb(39,15,68);
+		background-color:rgb(39,15,67);
 		font-family: sans-serif;
 	} 
 	.game{
 		height: 96vh;
 	}   
 	.score{
-		display: flex;
+		display: flex; 
 		justify-content: space-around;
 		color: #ddd;
 		align-items: center;

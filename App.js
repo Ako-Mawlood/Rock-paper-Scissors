@@ -116,14 +116,21 @@
             }addingAnimi()
 
             if(addingAnimi){
-              winnerText.textContent="Getting computer option..."
-                if(pColor.classList('pColorGreen')||cColor.classList("cColorGreen")){
-                  pScore.textContent="0"; 
-                  cScore.textContent="0"
-                  console.log("fired")
-                }
+              
+             
+               setTimeout(()=>{
+                winnerText.textContent ="."
+               },100)
+            
+               setTimeout(()=>{
+                winnerText.textContent =".."
+              },850)
+
+              setTimeout(()=>{
+                winnerText.textContent ="..."
+              },1500)
             }
-            console.log(pColor)
+
             function rest(){
               computerHand.src=`assets/rock.png`
                 playerHand.src=`assets/rock.png`
