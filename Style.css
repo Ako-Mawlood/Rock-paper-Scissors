@@ -4,11 +4,24 @@
 		box-sizing: border-box;
 	}
 	body{
-		background-color:rgb(39,15,67);
+		margin: 0;
+		padding: 0;
+
+	   position: relative;
+		background: linear-gradient(to right bottom, rgb(81, 75, 119),rgb(12, 7, 51));
 		font-family: sans-serif;
 	} 
+	body::before {
+		content: "";
+		position: absolute;
+		top: 0;
+		right: 0;
+		width:100vh;
+		height:100vh;
+
+	  }
 	.game{
-		height: 96vh;
+		height: 100vh;
 	}   
 	.score{
 		display: flex; 
@@ -180,4 +193,6 @@
 
 	}
 	}
-	
+	button:hover{
+		transform:translateY(-5PX);
+	}

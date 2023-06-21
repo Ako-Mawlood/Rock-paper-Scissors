@@ -120,25 +120,33 @@
              
                setTimeout(()=>{
                 winnerText.textContent ="."
+                winnerText.style.color="red"
                },100)
             
                setTimeout(()=>{
                 winnerText.textContent =".."
+                winnerText.style.color="orange"
+
               },850)
 
               setTimeout(()=>{
                 winnerText.textContent ="..."
-              },1500)
-            }
+                winnerText.style.color="green"
 
+              },1600)
+            }
+             
             function rest(){
               computerHand.src=`assets/rock.png`
                 playerHand.src=`assets/rock.png`
+                
               
             }
             function roundEnd(){
             	if (playerScore===5){
                    winnerText.textContent="Player won this round"
+                   winnerText.style.color="white"
+
                      playerScore=0;
                    computerScore=0
                   pColor.classList.add("pColorGreen")
@@ -149,7 +157,8 @@
             	 else{
                    	 pColor.classList.remove("pColorGreen")
                   cColor.classList.remove("cColorRed")
-
+                winnerText.style.color="white"
+                   
                    }
             	if(computerScore===5){
             		winnerText.textContent="Computer won this round"
@@ -158,10 +167,14 @@
                      pColor.classList.add("pColorRed")
                   cColor.classList.add("cColorGreen")
                   showingWinningPng()
+                winnerText.style.color="white"
+
                    return;
             	}else{
             		   pColor.classList.remove("pColorRed")
                   cColor.classList.remove("cColorGreen")
+                winnerText.style.color="white"
+
             	}
             }
             function blocking(){
